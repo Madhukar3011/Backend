@@ -17,6 +17,6 @@ const commentSchema = new Schema({
 },
 {timestamps: true})
 
-videoSchema.plugin(mongoosePaginate)
+commentSchema.plugin(mongoosePaginate)
 
 export const Comment = mongoose.model("Comment", commentSchema )
