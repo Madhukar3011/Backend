@@ -26,7 +26,7 @@ const getVideoComments = asyncHandler(async (req, res) => {
     const pageNumber = Math.max(1, parseInt(page, 10) || 1);
     const limitNumber = Math.min(
         100,
-        Math.max(1, parseInt(limit, 10) || 10)
+        Math.max(1, parseInt(limit, 10) || 1)
     );
     const skip = (pageNumber -1) * limitNumber;
 

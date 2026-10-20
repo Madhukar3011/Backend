@@ -150,7 +150,7 @@ const getLikedVideos = asyncHandler(async (req, res) => {
     const {page = 1, limit = 10} = req.query;
 
     const pageNumber = Math.max(1, parseInt(page, 10) || 1);
-    const limitNumber = Math.max(1, parseInt(page, 10) || 1);
+    const limitNumber = Math.max(1, parseInt(page, 10) || 10);
     const skip = (pageNumber -1 ) * limitNumber;
  
     // find all video liked by the user
